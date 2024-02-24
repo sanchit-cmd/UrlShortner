@@ -23,7 +23,7 @@ app.set('views', path.resolve('./views'));
 app.use('/url', urlRoute);
 app.use('/', staticRouter);
 
-app.get('/:shortId', async (req, res) => {
+app.get('/api/:shortId', async (req, res) => {
 	const shortId = req.params.shortId;
 
 	const entry = await URL.findOneAndUpdate(
